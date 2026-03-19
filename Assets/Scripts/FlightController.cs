@@ -16,7 +16,7 @@ public class FlightController : MonoBehaviour
     void Update()
     {
         float pitchInput = 0f;
-        float horizontal = Input.GetAxis("Horizontal");
+        float yawInput = 0f;
 
         float roll = 0f;
         if (Input.GetKey(KeyCode.Q))
@@ -25,7 +25,7 @@ public class FlightController : MonoBehaviour
             roll = -1f;
 
 
-        //Forward Movement
+        
         transform.position += transform.forward * forwardSpeed * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.UpArrow))
@@ -36,10 +36,15 @@ public class FlightController : MonoBehaviour
         transform.Rotate(Vector3.right * pitchInput * pitchSpeed * Time.deltaTime);
 
 
+        if (Input.GetKey(KeyCode.LeftArrow))
+            yawInput = -1f;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            yawInput = 1f;
+
+        transform.Rotate(Vector3.up * yawInput * yawSpeed * Time.deltaTime);
 
 
-        // Yaw (A/D)
-        transform.Rotate(0f, horizontal * yawSpeed * Time.deltaTime, 0f);
+    
 
         // Roll (Q/E)
         transform.Rotate(0f, 0f, roll * rollSpeed * Time.deltaTime);
