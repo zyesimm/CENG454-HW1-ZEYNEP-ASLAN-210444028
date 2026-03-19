@@ -24,9 +24,12 @@ public class FlightController : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
             roll = -1f;
 
-
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Translate(Vector3.forward * forwardSpeed *Time.deltaTime);
+        }
         
-        transform.position += transform.forward * forwardSpeed * Time.deltaTime;
+        
 
         if (Input.GetKey(KeyCode.UpArrow))
             pitchInput = -1f;
