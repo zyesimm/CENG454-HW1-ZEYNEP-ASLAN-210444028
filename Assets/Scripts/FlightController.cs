@@ -34,6 +34,9 @@ public class FlightController : MonoBehaviour
 
     private void HandleRotation()
     {
+        float pitchInput = 0f;
+        float yawInput = 0f;
+        float rollInput = 0f;
 
     }
 
