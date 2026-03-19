@@ -4,12 +4,13 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/[Logs]/
-/[MemoryCaptures]/
-/[UserSettings]/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]serSettings/
 
-# --- IDE (Visual Studio / Rider) ---
+# --- IDE (Visual Studio / Rider / VS Code) ---
 .vs/
+.vscode/
 .gradle/
 ExportedObj/
 .consulo/
