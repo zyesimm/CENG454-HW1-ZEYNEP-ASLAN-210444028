@@ -7,9 +7,9 @@ using UnityEngine;
 
 public class FlightController : MonoBehaviour
 {
+    public float forwardSpeed = 10f;
     public float pitchSpeed = 45f;
     public float yawSpeed = 60f;
-
     public float rollSpeed = 80f;
 
 
@@ -24,6 +24,9 @@ public class FlightController : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
             roll = -1f;
 
+
+        //Forward Movement
+        transform.position += transform.forward * forwardSpeed * Time.deltaTime;
 
         // Pitch (W/S)
         transform.Rotate(-vertical * pitchSpeed * Time.deltaTime, 0f, 0f);
