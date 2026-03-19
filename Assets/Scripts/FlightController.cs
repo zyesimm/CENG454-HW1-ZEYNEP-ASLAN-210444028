@@ -50,8 +50,11 @@ public class FlightController : MonoBehaviour
             yawInput = 1f;
         transform.Rotate(Vector3.up * yawInput * yawSpeed * Time.deltaTime);
 
-
-
+        if (Input.GetKey(KeyCode.Q))
+            rollInput = 1f;
+        else if (Input.GetKey(KeyCode.E))
+            rollInput = -1f;
+        transform.Rotate(Vector3.forward * rollInput * rollSpeed * Time.deltaTime);
 
 
     }
