@@ -43,3 +43,6 @@ Desktop.ini
 # --- Crash Reports ---
 sysinfo.txt
 crash_reporter.cfg
+
+CodingBeforeSky/
+*.slnx
