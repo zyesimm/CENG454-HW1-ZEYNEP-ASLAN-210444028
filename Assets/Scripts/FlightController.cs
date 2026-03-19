@@ -12,6 +12,19 @@ public class FlightController : MonoBehaviour
     public float yawSpeed = 60f;
     public float rollSpeed = 80f;
 
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+
+        if (rb!= null)
+        {
+            rb.freezeRotation = true;
+        }
+    }
+
+
 
     void Update()
     {
