@@ -40,7 +40,19 @@ public class FlightController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
             pitchInput = -1f;
+        else if (Input.GetKey(KeyCode.DownArrow))
+            pitchInput = 1f;
         transform.Rotate(Vector3.right * pitchInput * pitchSpeed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+            yawInput = -1f;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            yawInput = 1f;
+        transform.Rotate(Vector3.up * yawInput * yawSpeed * Time.deltaTime);
+
+
+
+
 
     }
 
