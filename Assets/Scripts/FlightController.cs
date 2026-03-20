@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class FlightController : MonoBehaviour
 {
-    public float forwardSpeed = 10f;
-    public float pitchSpeed = 45f;
-    public float yawSpeed = 60f;
-    public float rollSpeed = 80f;
+    [SerializeField] private float forwardSpeed = 10f;
+    [SerializeField] private float pitchSpeed = 45f;
+    [SerializeField] private float yawSpeed = 60f;
+    [SerializeField] private float rollSpeed = 80f;
 
     private Rigidbody rb;
 
